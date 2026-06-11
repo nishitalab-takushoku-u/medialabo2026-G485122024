@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>「Web コンテンツ作成」の成果 G485122024</title>
+    <link rel="stylesheet" href="index.css">
   </head>
   <body>
     <h1>「Web コンテンツ作成」の成果 G485122024</h1>
@@ -29,39 +30,55 @@
     <div id="classtimes">
       <h2>各授業回の学習事項</h2>
       <div>
-        <h3>第1回 WWWとHTML</h3>
-        <p>
-          WebページのWWW(WorldWideWeb)とHTMLの基本的な内容を学んだ．
-          <br>Webページを構成するには，いくつかの部品が必要であった．
-          <br>今回の講義の中では，特にHTMLの記述について学んだ．
-          <br>HTMLでは，多くの要素を並べることでWebページの骨格を作っている．
-          <br>1つのタグで囲うことにより，その要素の効果を受けられる．
-          <br>a要素では，1つの段落として扱え，br要素はその場所で一度改行を挟むことができる．
-          <br>それぞれのタグの管理方法として，属性のidやclassなどはあるが，次回から学ぶだろう．
-          <br>また，画像ファイルを表示する手法としてimg要素があった．
-          <br>img要素の属性であるhrefに画像ファイルのリンクを登録することで，Webページ上に画像を表示することができた．
-          <br>他にもいくつか学んだが，特にリスト要素であるol要素とul要素では異なっており，ul要素では番号なし，ol要素では番号ありの形式でリストを表現できた．
-          <br>講義外の学習として，Webの最新の情報が記載された「MDN Web Docs」を用いるように教わった．
-          <br>実際にそのサイト上に試せる環境や例などの記述によって学びやすい環境があることを知った．
-        </p>
-        <p>
-          演習の成果: <a href="./practice-html/elements.html" title="演習1-4" target="_blank">演習1-4: HTMLのさまざまな要素</a>
-        </p>
-      </div>
-      <div>
-        <h3>第2回 CSSによるWebページの装飾</h3>
-      </div>
-      <div>
-        <h3>第3回 JavaScriptの基本</h3>
-      </div>
-      <div>
-        <h3>第4回 イベント処理とDOM(1)</h3>
-      </div>
-      <div>
-        <h3>第5回 DOM(2)</h3>
-      </div>
-      <div>
-        <h3>第6回 プロジェクト課題を完成させよう</h3>
+        <div>
+          <h3>第1回 WWWとHTML</h3>
+          <p>
+            Webページの<span>WWW</span>(WorldWideWeb)と<span>HTML</span>の基本的な内容を学んだ．
+            <br>Webページを構成するには，いくつかの部品が必要であった．
+            <br>今回の講義の中では，特に<span>HTML</span>の記述について学んだ．
+            <br><span>HTML</span>では，多くの要素を並べることでWebページの骨格を作っている．
+            <br>1つのタグで囲うことにより，その要素の効果を受けられる．
+            <br><span>a要素</span>では，1つの段落として扱え，<span>br要素</span>はその場所で一度改行を挟むことができる．
+            <br>それぞれのタグの管理方法として，属性の<span>id</span>や<span>class</span>などはあるが，次回から学ぶだろう．
+            <br>また，画像ファイルを表示する手法として<span>img要素</span>があった．
+            <br><span>img要素</span>の属性である<span>href</span>に画像ファイルのリンクを登録することで，Webページ上に画像を表示することができた．
+            <br>他にもいくつか学んだが，特にリスト要素である<span>ol要素</span>と<spanul要素></spanul要素>では異なっており，<span>ul要素</span>では番号なし，<span>ol要素</span>では番号ありの形式でリストを表現できた．
+            <br>講義外の学習として，Webの最新の情報が記載された「MDN Web Docs」を用いるように教わった．
+            <br>実際にそのサイト上に試せる環境や例などの記述によって学びやすい環境があることを知った．
+          </p>
+          <p>
+            演習の成果: <a href="./practice-html/elements.html" title="演習1-4" target="_blank">演習1-4: HTMLのさまざまな要素</a>
+          </p>
+        </div>
+        <div>
+          <h3>第2回 CSSによるWebページの装飾</h3>
+          <p>
+            Webページの<span>CSS</span>の構築について学んだ．
+            <br><span>HTML</span>での形式の記述では，各要素からページの骨格を作成した．
+            <br><span>CSS</span>では，ページの装飾を行なっており，その手法について学習を行った．
+            <br>文字のサイズやスタイル，カラーなどを設定することが可能だった．
+            <br>それらの指定として，各要素名や<span>class</span>などの特定のものを指す属性を用いた．
+            <br>また，その中からn番目を用いたい時などには，各要素の後に<span>:nth-child(n)</span>と記述することで行えるのある．
+            <br>リンクなどの装飾では，訪れていないものに<span>:link</span>，訪れたものに<span>:visided</span>を指定することで装飾の指定ができた．
+            <br><span>CSS</span>の扱いによって，Webページの演出にこだわれるようになったのだ．
+          </p>
+          <p>
+            演習の成果: <a href="./practice-css/browser-intro.html" title="演習2-3" target="_blank">演習2-3: ウェブブラウザ説明ページの装飾</a>
+          </p>
+          <img src="./practice-css/firefox_icon.png" title="firefox">
+        </div>
+        <div>
+          <h3>第3回 JavaScriptの基本</h3>
+        </div>
+        <div>
+          <h3>第4回 イベント処理とDOM(1)</h3>
+        </div>
+        <div>
+          <h3>第5回 DOM(2)</h3>
+        </div>
+        <div>
+          <h3>第6回 プロジェクト課題を完成させよう</h3>
+        </div>
       </div>
     </div>
   </body>

@@ -1,0 +1,31 @@
+body {
+    background-color: oldlace;
+}
+h1 {
+    background: linear-gradient(to right, orangered, oldlace);
+}
+h2 {
+    border-bottom: solid;
+    border-color:deepskyblue;
+    color: rgb(255, 100, 100);
+    text-shadow: 0 0 3px green;
+}
+table {
+    background: rgb(255, 255, 180);
+    border-collapse: collapse;
+    border: solid;
+}
+caption {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+th, td {
+    border: solid;
+    border-width: 1px;
+}
+td:nth-child(2n) {
+    background-color: white;
+}
+td:nth-child(2n+1){
+    background-color: whitesmoke;
+}

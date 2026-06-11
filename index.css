@@ -1,0 +1,51 @@
+body{
+    margin: 0.3rem 1rem 0.3rem 1rem;
+}
+h1 {
+    background: linear-gradient(to right, aqua, yellow);
+    border: outset;
+    border-width: 10px;
+    border-color: lightcoral;
+}
+h2 {
+    margin: 1rem 0.5rem 0 0.5rem;
+    color: darkblue;
+    border-bottom-style: solid;
+    border-bottom-color: orange;
+}
+h3 {
+    margin: 0.5rem 1rem 0 1rem;
+}
+div {
+    border-radius: 20px;
+    background-color: lightcyan;
+}
+#classtimes > div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 500px 500px;
+    grid-gap: 10px
+}
+#classtimes > div > div {
+    background-color: #ffefaf;
+    border-radius: 20px;
+}
+a:link {
+    color: blue;
+}
+a:visited {
+    color: mediumvioletred;
+}
+a:hover {
+    color: darkcyan;
+}
+p {
+    margin: 0.3rem 1.5rem 0.3rem 1.5rem;
+}
+span {
+    color: red;
+}
+img {
+    float: right;
+    margin-right: 3rem;
+}
