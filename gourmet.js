@@ -17,6 +17,23 @@ function print(data) {
   }
 }
 
+// 宿題4-1　のプログラム　記述場所の指定がなかったため
+let b = document.querySelector('button#search');
+b.addEventListener('click', showSelectResult);
+
+function showSelectResult() {
+  let s = document.querySelector('select#food');
+  let idx = s.selectedIndex;  // idx 番目の option が選択された
+
+  let os = s.querySelectorAll('option');  // s の子要素 option をすべて検索
+  let o = os.item(idx);       // os の idx 番目の要素
+
+  // 選択されたoptionのgenreの値とその名称を表記する
+  console.log('value=' + o.getAttribute('value'));  // id 属性を表示
+  console.log('textContent=' + o.textContent);
+}
+
+
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
 
