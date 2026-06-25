@@ -18,13 +18,21 @@
     <div>
       <h2>プロジェクト課題について</h2>
       ここには，取り組んだプロジェクト課題について200文字以上で書きましょう．
-      <p>プロジェクト課題で制作したページ: <a href="project.html" title="project" target="_blank">project.html</a></p>
+      <p>プロジェクト課題で制作したページ : <a href="project.html" title="project" target="_blank">project.html</a></p>
     </div>
     <div>
       <h2>数当てゲーム</h2>
       <p>
-        このテーマの第3回から数あてゲームを作成した後にゲームの概要の説明を200字以上で書きましょう
-        <p>数当てゲーム:<a href="kazuate.html" title="kazuate" target="_blank">kazuate.html</a></p>
+        この数当てゲームでは，第4回に学んだinput要素とDOM，そしてJavascriptでの処理を中心に取り扱った．
+        <br>inputでは，type属性をtextとし，Javascriptで型変換し数値として扱うことにした．
+        <br>span要素に実行回数と入力した値をそれぞれにtextContentに入れることにした．
+        これによって，現在の入力がコンピュータが正しく認識していることの確認と次の入力の参考にできるようにした．
+        <br>予想回数が3回以下の時の正誤判定では，できる限り階層を作るようにして，resultのtextContentに追記していく形にした．
+        プログラムとしての見やすさや全体の記述量を削減するためである．
+        <br>予想回数が4回以上かを判定するのは，正誤判定の前にlet変数のkaisuが4を超えている場合かを判定することにした．
+        また，正解済みかどうかを判定する際に，let変数を宣言し，これに正解済みであるかをboolean型として保存した．
+        <br>HTML内の記述は，全てグローバル関数として最初に宣言している．これによって，指定の関数を呼び出す度に処理が煩雑にならないようにした．
+        <p>数当てゲーム : <a href="kazuate.html" title="kazuate" target="_blank">kazuate.html</a></p>
       </p>
     </div>
     <div id="classtimes">
@@ -47,7 +55,7 @@
             実際にそのサイト上に試せる環境や例などの記述によって学びやすい環境があることを知った．
           </p>
           <p>
-            演習の成果: <a href="practice-html/elements.html" title="演習1-4" target="_blank">演習1-4: HTMLのさまざまな要素</a>
+            演習の成果 : <a href="practice-html/elements.html" title="演習1-4" target="_blank">演習1-4: HTMLのさまざまな要素</a>
           </p>
         </div>
         <div>
@@ -63,7 +71,7 @@
             <br><span>CSS</span>の扱いによって，Webページの演出にこだわれるようになったのだ．
           </p>
           <p>
-            演習の成果: <a href="practice-css/browser-intro.html" title="演習2-3" target="_blank">演習2-3: ウェブブラウザ説明ページの装飾</a>
+            演習の成果 : <a href="practice-css/browser-intro.html" title="演習2-3" target="_blank">演習2-3: ウェブブラウザ説明ページの装飾</a>
           </p>
           <img src="practice-css/firefox_icon.png" title="firefox">
         </div>
@@ -86,11 +94,27 @@
             <br>また，デバックの手法としてウェブ開発ツールを用いて一つ一つエラーを確認する方法を学んだ．
           </p>
           <p>
-            演習の成果: <a href="practice-js/obj-practice.html" title="演習3-6" target="_blank">演習3-6: オブジェクトの参照</a>
+            演習の成果 : <a href="practice-js/obj-practice.html" title="演習3-6" target="_blank">演習3-6: オブジェクトの参照</a>
           </p>
         </div>
         <div>
           <h3>第4回 イベント処理とDOM(1)</h3>
+          <p>
+            今回は，JavaScriptのイベント処理とDOMについて学んだ．
+            <br>イベント処理を扱うには，JavascriptとHTMLの両方を適切に設定する必要がある．
+            HTMLには，フォーム要素の設置を行う．<span>input要素</span>に場面に合わせた<span>type属性</span>を決めることが可能だ．
+            <span>type属性</span>には，text，color，dataなどの入力を行うものやradio，checkboxなどの選択を行うものなどがある．
+            <br>そして，Javascriptでは，<span>addEventListener</span>を使うことにより，ボタンを押すことなどでイベント処理を行うことができた．
+            この関数には，対象の要素に指定した入力があった際に登録されたイベントハンドラを実行する機能があった．
+            これによって，ボタンを押したら入力された値を足した値を出力するといった演習を行うことが可能だった．
+            <br>また，JavascriptからHTMLの要素の内容を操作する際にDOMを扱う必要がある．
+            DOMとは，Webページ上に存在するHTML要素の検索方法とテキスト変更方法のことで，<span>querySelector</span>を使用して対象の要素名やID名を記述することで可能だ．
+            このDOMを扱うことによって，Javascriptの関数で<span>input要素</span>に入力された内容を参照したり，<span>p要素</span>に記載されたテキストを書き換えたりできた．
+            これには違いがあり，HTMLに記載されているものを参照する際に<span>textContent</span>，ユーザの入力を参照する場合に<span>value</span>を指定することがあった．
+          </p>
+          <p>
+            演習の成果 : <a href="practice-eventdom/tashizan.html" title="演習4-10" target="_blank">演習4-10: 足し算ページ</a>
+          </p>
         </div>
         <div>
           <h3>第5回 DOM(2)</h3>
