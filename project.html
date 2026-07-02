@@ -3,19 +3,19 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>課題1-4: 検索結果を表示する</title>
+        <title>プロジェクト課題</title>
         <link rel="stylesheet" href="project.css">
         <script src="gourmet.js" defer></script>
     </head>
     <body>
         <h1>グルメ情報</h1>
-        <div>
+        <div id="content">
             <div>
                 <label for="food">検索キー : </label>
                 <select name="food" id="food">
+                    <!-- ジャンルの内容として，subジャンルのみしか表示されない，または検索してもデータが出ないものは省いた．-->
                     <option value="">選択してください</option>
                     <option value="G001">居酒屋</option>
-                    <option value="G002">ダイニングバー・バル</option>
                     <option value="G003">創作料理</option>
                     <option value="G004">和食</option>
                     <option value="G005">洋食</option>
@@ -28,52 +28,11 @@
                     <option value="G012">バー・カクテル</option>
                     <option value="G013">ラーメン</option>
                     <option value="G014">カフェ・スイーツ</option>
-                    <option value="G015">その他グルメ</option>
                     <option value="G016">お好み焼き・もんじゃ</option>
                     <option value="G017">韓国料理</option>
                 </select>
                 <button id="search">検索</button>
             </div>
-            <h2>飲食店情報の検索結果（2件）</h2>
-            <div>
-                <table>
-                    <caption>飲食店情報</caption>
-                    <tr>
-                        <th>ジャンル</th>
-                        <th>サブジャンル</th>
-                        <th>店舗名</th>
-                        <th>住所</th>
-                        <th>アクセス情報</th>
-                        <th>キャッチコピー</th>
-                        <th>予算</th>
-                        <th>営業日時</th>
-                        <th>最寄り駅</th>
-                    </tr>
-                    <tr>
-                        <td>居酒屋</td>
-                        <td>ダイニングバー・バル</td>
-                        <td>バグダッドカフェ Bagdadcafe/モータウン MOTOWN</td>
-                        <td>東京都八王子市明神町４-6-12　ホテル・ザ・ビー八王子（旧八王子プラザホテル）2F</td>
-                        <td>京王八王子駅を背にし右手に見えるローソンの隣のビル、ホテルザ・ビーの2階です。</td>
-                        <td>【サプライズ演出有】 結婚パーティー受付中</td>
-                        <td>3001～4000円</td>
-                        <td>月～日、祝日、祝前日: 17:00～21:00 （料理L.O. 20:00 ドリンクL.O. 20:00）</td>
-                        <td>京王八王子</td>
-                    </tr>
-                    <tr>
-                        <td>居酒屋</td>
-                        <td>ダイニングバー・バル</td>
-                        <td>隠れ家バル Funny&Bouquet</td>
-                        <td>東京都八王子市東町12-14</td>
-                        <td>ＪＲ八王子駅北口徒歩1分/京王八王子駅徒歩3分</td>
-                        <td>2.5時間飲み放題付2000円~ 【★少人数様ソファー★】</td>
-                        <td>2001～3000円</td>
-                        <td>月～日、祝日、祝前日: 17:00～翌5:00 （料理L.O. 翌3:00 ドリンクL.O. 翌4:00）</td>
-                        <td>八王子</td>
-                    </tr>
-                </table>
-            </div>
         </div>
-
     </body>
 </html>

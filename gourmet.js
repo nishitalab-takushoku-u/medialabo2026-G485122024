@@ -36,7 +36,68 @@ function showSelectResult() {
 
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
+  // 既存の検索結果を削除する
+  const result = document.querySelector('div#result');
+  if(result != null){
+    result.remove();
+  }
+  // 新しい検索結果を表示する
+  // div#content > div#result > h2 + table > caption + (tr > th*9) + (tr > td*9)*n
+  const body = document.querySelector('div#content');
+  const div = document.createElement('div');
+  body.insertAdjacentElement('beforeend', div);
+  div.setAttribute('id', 'result');
 
+  /* // table の作成　tableからリストに変更したためコメントアウト。あとで削除すること
+  const table = document.createElement('table');
+  div.insertAdjacentElement('beforeend', table);
+  const caption = document.createElement('caption');
+  caption.textContent = "飲食店情報";
+  table.insertAdjacentElement('beforeend', caption);
+  let tr = document.createElement('tr');
+  table.insertAdjacentElement('beforeend', tr);
+  const title = ['店舗名', 'ジャンル', 'サブジャンル', '住所', 'アクセス情報', 'キャッチコピー', '予算', '営業日時', '最寄り駅'];
+  for(let t of title){
+    let th = document.createElement('th');
+    tr.insertAdjacentElement('beforeend', th);
+    th.textContent = t;
+  }
+  
+  let cnt = 0;
+  for(let r of data.results.shop){
+    parameter = [r.name, r.genre.name, r.sub_genre.name, r.address, r.access, r.catch, r.budget.name, r.open, r.station_name];
+    cnt = cnt + 1;
+    tr = document.createElement('tr');
+    table.insertAdjacentElement('beforeend', tr);
+    for(let p of parameter){
+      let td = document.createElement('td');
+      tr.insertAdjacentElement('beforeend', td);
+      td.textContent = p;
+    }
+  }
+  const exit = document.createElement('h2');
+  div.insertAdjacentElement('afterbegin', exit);
+  exit.textContent = "飲食店情報の検索結果（" + cnt + "件）"; */
+
+  // リスト形式の作成
+  cnt = 0;
+  for(let r of data.results.shop){
+    const h2 = document.createElement('h2');
+    div.insertAdjacentElement('beforeend', h2);
+    h2.textContent = r.name;
+    const ul = document.createElement('ul');
+    div.insertAdjacentElement('beforeend', ul);
+    parameter = ["ジャンル: " + r.genre.name, "サブジャンル: " + r.sub_genre.name, "住所: " + r.address, "アクセス情報: " + r.access, "キャッチコピー: " + r.catch, "予算: " + r.budget.name, "営業日時: " + r.open, "最寄り駅: " + r.station_name];
+    cnt = cnt + 1;
+    for(let p of parameter){
+      const li = document.createElement('li');
+      ul.insertAdjacentElement('beforeend', li);
+      li.textContent = p;
+    }
+  }
+  const exit = document.createElement('p');
+  div.insertAdjacentElement('afterbegin', exit);
+  exit.textContent = "飲食店情報の検索結果（" + cnt + "件）";
 }
 
 // 課題6-1 のイベントハンドラ登録処理は以下に記述
